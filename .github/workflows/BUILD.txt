@@ -1,0 +1,19 @@
+TagsXit FF — build Windows x64 via GitHub Actions (sem instalar compilador local)
+
+1. Entre em https://github.com e crie um repositório vazio.
+2. Extraia este ZIP e envie TODOS os arquivos e pastas para o repositório,
+   incluindo a pasta oculta .github/workflows.
+3. Abra a aba Actions do repositório.
+4. Se aparecer, confirme "I understand my workflows, go ahead and enable them".
+5. Selecione "Build TagsXitFF (Windows x64)" e clique em "Run workflow".
+6. Aguarde o job ficar verde. Abra a execução concluída e baixe o artefato
+   "TagsXitFF-Windows-x64" na seção Artifacts. Dentro dele estará TagsXitFF.exe.
+
+Também compila automaticamente em cada push para main/master.
+
+O workflow usa runner Windows hospedado pelo GitHub com CMake e MSVC já instalados.
+Não é necessário instalar Visual Studio, MSYS2 ou MinGW no seu computador.
+
+Escopo do app: painel independente de configurações visuais. Não acessa Free Fire,
+não injeta código, não lê memória de processos, não automatiza mira e não contorna
+anticheat. O executável só será gerado depois que o workflow for executado no GitHub.
